@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZenNestSEOLife — SEO Without the Noise</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --stone:#EEEAE2;
+    --paper:#F7F5EF;
+    --ink:#22221E;
+    --ink-soft:#565348;
+    --slate:#67727A;
+    --slate-soft:#DDE2E1;
+    --line:#DDD7C9;
+    --serif:'Marcellus', serif;
+    --sans:'Mulish', sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--paper); color:var(--ink); font-family:var(--sans); font-weight:300; line-height:1.75; letter-spacing:0.01em;}
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:920px; margin:0 auto; padding:0 32px;}
+  .wrap-wide{max-width:1040px; margin:0 auto; padding:0 32px;}
+
+  header{padding:34px 0;}
+  nav{display:flex; justify-content:space-between; align-items:center; max-width:1040px; margin:0 auto; padding:0 32px;}
+  .logo{font-family:var(--serif); font-size:1.2rem; letter-spacing:0.03em;}
+  .navlinks{display:flex; gap:40px; font-size:0.86rem; color:var(--ink-soft); letter-spacing:0.02em;}
+  .navlinks a:hover{color:var(--ink);}
+  .btn-line{border-bottom:1px solid var(--ink); font-size:0.84rem; padding-bottom:2px;}
+
+  .hero{text-align:center; padding:90px 0 40px; position:relative;}
+  .enso-wrap{position:relative; width:340px; height:340px; margin:0 auto 20px;}
+  .enso-wrap svg{width:100%; height:100%;}
+  .hero-inner{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;}
+  .eyebrow{font-size:0.78rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--slate); margin-bottom:16px;}
+  h1{font-family:var(--serif); font-size:clamp(1.9rem,3.4vw,2.6rem); line-height:1.3; max-width:260px;}
+
+  .hero-copy{max-width:520px; margin:20px auto 0;}
+  .hero-copy p{color:var(--ink-soft); font-size:1.05rem; margin-bottom:34px;}
+  .hero-ctas{display:flex; gap:26px; align-items:center; justify-content:center;}
+  .btn-lg{background:var(--ink); color:var(--paper); padding:15px 34px; border-radius:2px; font-size:0.88rem; letter-spacing:0.04em;}
+  .link-under{font-size:0.86rem; border-bottom:1px solid var(--slate); padding-bottom:2px; color:var(--ink-soft);}
+
+  .divider{width:1px; height:56px; background:var(--line); margin:0 auto;}
+
+  .principles{text-align:center; padding:80px 0;}
+  .principles .tag{font-size:0.78rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--slate); margin-bottom:20px; display:block;}
+  .principles h2{font-family:var(--serif); font-size:clamp(1.7rem,2.8vw,2.2rem); max-width:520px; margin:0 auto 70px; line-height:1.4;}
+
+  .three{display:grid; grid-template-columns:repeat(3,1fr); gap:50px; text-align:left;}
+  .three .item .num{font-family:var(--serif); font-size:1.1rem; color:var(--slate); margin-bottom:16px; display:block;}
+  .three .item h3{font-family:var(--serif); font-size:1.2rem; margin-bottom:12px;}
+  .three .item p{color:var(--ink-soft); font-size:0.92rem;}
+
+  .stone-band{background:var(--stone); padding:90px 0; text-align:center;}
+  .stone-band .tag{font-size:0.78rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--slate); margin-bottom:20px; display:block;}
+  .stone-band h2{font-family:var(--serif); font-size:clamp(1.7rem,2.8vw,2.2rem); max-width:560px; margin:0 auto 50px; line-height:1.4;}
+
+  .stat-row{display:flex; justify-content:center; gap:0; flex-wrap:wrap;}
+  .stat{padding:0 46px; border-right:1px solid var(--line);}
+  .stat:last-child{border-right:none;}
+  .stat b{font-family:var(--serif); font-size:2rem; display:block; margin-bottom:6px;}
+  .stat span{font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--slate);}
+
+  .path{padding:100px 0; text-align:center;}
+  .path .tag{font-size:0.78rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--slate); margin-bottom:20px; display:block;}
+  .path h2{font-family:var(--serif); font-size:clamp(1.7rem,2.8vw,2.2rem); max-width:520px; margin:0 auto 70px; line-height:1.4;}
+
+  .steps{display:flex; justify-content:center; align-items:flex-start; gap:0; max-width:800px; margin:0 auto;}
+  .step{flex:1; padding:0 20px; position:relative;}
+  .step-dot{width:10px; height:10px; border-radius:50%; border:1px solid var(--ink); margin:0 auto 24px;}
+  .step-line{position:absolute; top:5px; left:calc(-50% + 5px); width:100%; height:1px; background:var(--line); z-index:-1;}
+  .step:first-child .step-line{display:none;}
+  .step h4{font-family:var(--serif); font-size:1.05rem; margin-bottom:10px;}
+  .step p{font-size:0.85rem; color:var(--ink-soft);}
+
+  .quote-block{text-align:center; padding:90px 0;}
+  .quote-block blockquote{font-family:var(--serif); font-style:italic; font-size:clamp(1.4rem,2.4vw,1.8rem); max-width:640px; margin:0 auto; line-height:1.6; color:var(--ink);}
+  .quote-block cite{display:block; margin-top:26px; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--slate); font-style:normal;}
+
+  .cta-section{text-align:center; padding:100px 0 120px;}
+  .cta-section h2{font-family:var(--serif); font-size:clamp(2rem,3.6vw,2.8rem); margin-bottom:22px;}
+  .cta-section p{color:var(--ink-soft); max-width:420px; margin:0 auto 34px;}
+
+  footer{padding:40px 0; border-top:1px solid var(--line); display:flex; justify-content:space-between; font-size:0.82rem; color:var(--slate); max-width:1040px; margin:0 auto;}
+
+  @media(max-width:800px){
+    .navlinks{display:none;}
+    .three{grid-template-columns:1fr; gap:40px;}
+    .stat-row{gap:20px;}
+    .stat{border-right:none; padding:0 20px;}
+    .steps{flex-direction:column; gap:36px; align-items:center;}
+    .step-line{display:none;}
+    footer{flex-direction:column; gap:10px; text-align:center; padding:40px 32px;}
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <a class="logo" href="#">ZenNest SEO Life</a>
+    <div class="navlinks">
+      <a href="#practice">Practice</a>
+      <a href="#path">The Path</a>
+      <a href="#contact">Begin</a>
+    </div>
+    <a class="btn-line" href="#contact">Begin a Session</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="enso-wrap">
+      <svg viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg">
+        <path d="M170 40 C 260 45 300 110 295 175 C 290 245 235 295 165 298 C 100 300 50 260 42 200"
+          fill="none" stroke="#22221E" stroke-width="3.2" stroke-linecap="round" opacity="0.85"/>
+      </svg>
+      <div class="hero-inner">
+        <span class="eyebrow">SEO, Unhurried</span>
+        <h1>Rankings grow best in stillness, not scramble.</h1>
+      </div>
+    </div>
+    <div class="hero-copy wrap">
+      <p>ZenNest SEO Life is a calmer way to grow search traffic — fewer dashboards, less noise, and a plan sized to what your site actually needs, not what fills a retainer.</p>
+      <div class="hero-ctas">
+        <a class="btn-lg" href="#contact">Begin a session</a>
+        <a class="link-under" href="#practice">Our practice →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="principles wrap" id="practice">
+    <span class="tag">Our Practice</span>
+    <h2>Three principles guide every engagement.</h2>
+    <div class="three">
+      <div class="item">
+        <span class="num">一</span>
+        <h3>Do Less, Well</h3>
+        <p>A handful of the right fixes outperform fifty mediocre ones. We find the few that matter.</p>
+      </div>
+      <div class="item">
+        <span class="num">二</span>
+        <h3>Slow Is Sustainable</h3>
+        <p>No shortcuts that rank today and vanish in a penalty next quarter. Growth that holds.</p>
+      </div>
+      <div class="item">
+        <span class="num">三</span>
+        <h3>Clarity Over Noise</h3>
+        <p>One clear report, monthly. No dashboard you're expected to check daily to feel reassured.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="stone-band">
+    <div class="wrap">
+      <span class="tag">In Numbers</span>
+      <h2>Quiet results, held over time.</h2>
+      <div class="stat-row">
+        <div class="stat"><b>190%</b><span>Avg. Growth, 12 Months</span></div>
+        <div class="stat"><b>96%</b><span>Client Renewal Rate</span></div>
+        <div class="stat"><b>1</b><span>Report Sent, Monthly</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="path wrap-wide" id="path">
+    <span class="tag">The Path</span>
+    <h2>A simple, unhurried sequence.</h2>
+    <div class="steps">
+      <div class="step"><div class="step-line"></div><div class="step-dot"></div><h4>Listen</h4><p>A conversation about your business — not just your keywords.</p></div>
+      <div class="step"><div class="step-line"></div><div class="step-dot"></div><h4>Assess</h4><p>A quiet audit of what's working, and what's quietly holding you back.</p></div>
+      <div class="step"><div class="step-line"></div><div class="step-dot"></div><h4>Tend</h4><p>Focused, ongoing work on the handful of things that move the needle.</p></div>
+      <div class="step"><div class="step-line"></div><div class="step-dot"></div><h4>Reflect</h4><p>A monthly check-in — what grew, what we learned, what's next.</p></div>
+    </div>
+  </section>
+
+  <section class="quote-block wrap">
+    <blockquote>"For the first time, SEO didn't feel like something I had to manage. It just quietly worked, in the background."</blockquote>
+    <cite>— Founder, Independent Studio</cite>
+  </section>
+
+  <section class="cta-section wrap" id="contact">
+    <h2>Begin, when you're ready.</h2>
+    <p>A first session is unhurried and free — just a conversation about where things stand.</p>
+    <a class="btn-lg" href="mailto:hello@zennestseolife.site" style="display:inline-block;">Begin a session</a>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 ZenNest SEO Life</span>
+  <span>zennestseolife.site</span>
+</footer>
+</body>
+</html>
